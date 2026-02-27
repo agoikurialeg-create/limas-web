@@ -1,0 +1,287 @@
+/* ============ Base ============ */
+:root{
+  --brand-green: #6e7f1b;
+  --brand-yellow: #F0F200;
+  --brand-dark-green: #4F871E;
+  --text-dark: #111;
+  --soft-bg: #EBFAE3;
+}
+
+body{
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  color: var(--text-dark);
+}
+
+.section-title{
+  font-family: Georgia, "Times New Roman", serif;
+  font-weight: 700;
+  letter-spacing: .2px;
+}
+
+.bg-soft{ background: var(--soft-bg); }
+
+/* ============ Navbar (transparente -> blanca al scroll) ============ */
+.nav-logo{
+  height: 64px;
+  width: auto;
+}
+
+#mainNav{
+  transition: background-color .25s ease, box-shadow .25s ease;
+  padding-top: 14px;
+  padding-bottom: 14px;
+}
+
+#mainNav.nav-transparent{
+  background: rgba(0,0,0,0.3);
+  box-shadow: none;
+}
+
+#mainNav.nav-solid{
+  background: #fff;
+  box-shadow: 0 8px 28px rgba(0,0,0,.08);
+}
+
+#mainNav.nav-solid .nav-link{
+  color: #111 !important;
+}
+
+#mainNav.nav-solid.navbar{
+  --bs-navbar-color: #111;
+  --bs-navbar-hover-color: #111;
+}
+
+#mainNav .nav-link{
+  font-size: 15px;
+  font-weight: 500;
+  color: rgba(255,255,255,.92);
+}
+
+#mainNav .nav-link:hover{
+  color: #fff;
+  text-decoration: underline;
+  text-underline-offset: 6px;
+}
+
+/* Botón CITA PREVIA */
+.btn-cta{
+  background: var(--brand-green);
+  border: 0;
+  color: #fff;
+  font-weight: 700;
+  padding: 8px 14px;
+  border-radius: 6px;
+  font-size: 13px;
+  letter-spacing: .2px;
+}
+
+.btn-cta:hover{
+    background: var(--brand-dark-green);
+    color: #fff;
+    filter: brightness(1.1);
+    scale: 1.05;
+}
+
+/* ============ Hero Carousel ============ */
+.hero{
+  position: relative;
+}
+
+.hero-slide{
+  min-height: 78vh;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.hero-overlay{
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, rgba(0,0,0,.35), rgba(0,0,0,.15));
+}
+
+.hero-content{
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end; /* como en la captura, texto a la derecha */
+  text-align: right;
+  padding-top: 90px; /* deja respirar el navbar */
+}
+
+.hero-title{
+  color: #fff;
+  font-weight: 800;
+  letter-spacing: 2px;
+  font-size: clamp(42px, 6vw, 88px);
+  margin: 0;
+}
+
+.hero-title-sm{
+  font-size: clamp(28px, 4vw, 54px);
+  letter-spacing: 1px;
+}
+
+.hero-subtitle{
+  color: rgba(255,255,255,.85);
+  font-size: clamp(18px, 2.2vw, 34px);
+  margin-top: 6px;
+  margin-bottom: 18px;
+}
+
+.btn-hero{
+  background: var(--brand-green);
+  color: #fff;
+  border: 0;
+  padding: 10px 18px;
+  border-radius: 999px;
+  font-weight: 700;
+  letter-spacing: .6px;
+  font-size: 13px;
+}
+
+.btn-hero:hover{
+    background: var(--brand-dark-green);
+    color: #fff;
+    /*filter: brightness(1.1);*/
+    scale: 1.05;
+ }
+
+/* ============ Ofertas ============ */
+.offer-icon{
+  width: 150px;
+  height: 150px;
+  border-radius: 999px;
+  background: var(--soft-bg);
+  box-shadow: 0 18px 40px rgba(0,0,0,.3);
+  margin: 0 auto 18px auto;
+  display: grid;
+  place-items: center;
+}
+
+.offer-icon img{
+  width: 78px;
+  height: 78px;
+  object-fit: contain;
+}
+
+.offer-text{
+  /*color:  var(--brand-dark-green);*/
+  max-width: 220px;
+  margin: 0 auto;
+}
+
+/* ============ Service cards con hover (tipo captura) ============ */
+.bg-section{
+    background: linear-gradient(
+      180deg,
+      #FFFFFF 0%,
+      #EBFAE3 100%
+    );}
+.service-card{
+  position: relative;
+  display: block;
+  border-radius: 26px;
+  overflow: hidden;
+  height: 360px;
+  box-shadow: 0 18px 45px rgba(0,0,0,.10);
+  text-decoration: none;
+}
+
+.service-img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: scale(1.02);
+  transition: transform .35s ease, filter .35s ease;
+  filter: saturate(1.05);
+}
+
+.service-overlay{
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0,0,0,.15), rgba(0,0,0,.55));
+  display: flex;
+  align-items: flex-end;
+  padding: 22px;
+  transition: background .35s ease;
+}
+
+.service-label{
+  color: #fff;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 1.15;
+  text-transform: none;
+}
+
+/* Variante “clara” (como tu card de uñas esculpidas que se ve blanquita) */
+.service-card--light .service-img{
+  filter: brightness(1.12) contrast(.92) saturate(.9);
+}
+
+.service-overlay--light{
+  background: rgba(255,255,255,.55);
+  align-items: center;
+}
+
+.service-label--dark{
+  color: #222;
+  font-size: 18px;
+}
+
+/* Hover: zoom suave + overlay más “marcado” */
+.service-card:hover .service-img{
+  transform: scale(1.08);
+  filter: brightness(.95);
+}
+
+.service-card--light:hover .service-img{
+  filter: brightness(1.02) contrast(.95);
+}
+
+.service-card:hover .service-overlay{
+  background: linear-gradient(180deg, rgba(0,0,0,.10), rgba(0,0,0,.65));
+}
+
+.service-card--light:hover .service-overlay--light{
+  background: rgba(255,255,255,.78);
+}
+
+/* ============ Botón subir ============ */
+.to-top{
+  position: fixed;
+  right: 18px;
+  bottom: 18px;
+  width: 42px;
+  height: 42px;
+  border-radius: 10px;
+  border: 0;
+  background: rgba(0,0,0,.38);
+  color: #fff;
+  display: none;
+  box-shadow: 0 12px 30px rgba(0,0,0,.18);
+}
+.to-top.show{ display: inline-grid; place-items: center; }
+.to-top:hover{ filter: brightness(1.05); }
+
+/* Ajustes mobile */
+@media (max-width: 992px){
+  .hero-content{
+    align-items: center;
+    text-align: center;
+    padding-inline: 18px;
+  }
+  #mainNav.nav-solid.nav-link{ color: #111 ; }
+  #mainNav.nav-transparent.nav-link{
+    color:white !important;
+  }
+  .navbar-toggler{
+  border-color:white;
+  }
+  .navbar-toggler-icon{
+  color:white !important;
+  }
+}

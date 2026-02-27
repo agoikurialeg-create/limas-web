@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>LIMAS - Centro de Estética</title>
+    <meta name="description" content="Centro de estética en Barakaldo: manicura, pedicura, uñas esculpidas, depilación y estética facial y corporal." />
+
+    <!-- Bootstrap (CDN) -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- CSS propio -->
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav id="mainNav" class="navbar navbar-expand-lg navbar-dark fixed-top nav-transparent">
+    <div class="container">
+        <a class="navbar-brand d-flex align-items-center gap-2" href="index.html" aria-label="LIMAS Home">
+            <!-- Logo blanco (para navbar transparente) -->
+            <img id="logoLight" src="../assets/images/logo/logoBlanco.png" alt="LIMAS" class="nav-logo">
+            <!-- Logo negro (para navbar blanco). Oculto al inicio -->
+            <img id="logoDark" src="../assets/images/logo/logoNegro.png" alt="LIMAS" class="nav-logo d-none">
+        </a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu"
+                aria-controls="navMenu" aria-expanded="false" aria-label="Abrir menú">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navMenu">
+            <ul class="navbar-nav mx-auto mb-2 mb-lg-0 gap-lg-2">
+                <li class="nav-item"><a class="nav-link" href="manicura-pedicura.html">Manicura &amp; pedicura</a></li>
+                <li class="nav-item"><a class="nav-link" href="unas-esculpidas.html">Uñas esculpidas</a></li>
+                <li class="nav-item"><a class="nav-link" href="depilacion-cera.html">Depilación &amp; cera</a></li>
+                <li class="nav-item"><a class="nav-link" href="estetica-facial-corporal.html">Estética facial y corporal</a></li>
+            </ul>
+
+            <div class="d-flex">
+                <!-- Cita previa -> llamada (puedes cambiar a WhatsApp si quieres) -->
+                <a class="btn btn-cta d-flex align-items-center gap-2" href="tel:+34944383706">
+                    <span>CITA PREVIA</span>
+                    <i class="bi bi-telephone-fill"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<!-- HERO / CAROUSEL -->
+<header class="hero">
+    <div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="4500">
+        <div class="carousel-inner">
+            <!-- Slide 1 -->
+            <div class="carousel-item active hero-slide" style="background-image:url('../assets/images/servicios/habitacionCamilla.png');">
+                <div class="hero-overlay"></div>
+                <div class="container hero-content">
+                    <h1 class="hero-title">LIMAS</h1>
+                    <p class="hero-subtitle">Centro de Estética</p>
+                    <a class="btn btn-hero" href="tel:+34944383706">SOLICITA CITA PREVIA</a>
+                </div>
+            </div>
+
+            <!-- Slide 2 -->
+            <div class="carousel-item hero-slide" style="background-image:url('../assets/images/servicios/manicuraPedicura.png');">
+                <div class="hero-overlay"></div>
+                <div class="container hero-content">
+                    <h2 class="hero-title hero-title-sm">Manicura &amp; Pedicura</h2>
+                    <p class="hero-subtitle">Cuida tus manos y pies como se merecen</p>
+                    <a class="btn btn-hero" href="manicura-pedicura.html">VER SERVICIO</a>
+                </div>
+            </div>
+
+            <!-- Slide 3 -->
+            <div class="carousel-item hero-slide" style="background-image:url('../assets/images/servicios/unasEsculpidas.png');">
+                <div class="hero-overlay"></div>
+                <div class="container hero-content">
+                    <h2 class="hero-title hero-title-sm">Uñas esculpidas</h2>
+                    <p class="hero-subtitle">Acrílicas, gel y semipermanentes</p>
+                    <a class="btn btn-hero" href="unas-esculpidas.html">VER SERVICIO</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Controles -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev" aria-label="Anterior">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next" aria-label="Siguiente">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        </button>
+    </div>
+</header>
+
+<!-- SECCIÓN: ¿Qué ofrecemos? (iconos) -->
+<section class="section py-5 bg-section">
+    <div class="container">
+        <h2 class="section-title text-center mb-5">¿Qué ofrecemos?</h2>
+
+        <div class="row g-4 text-center">
+            <div class="col-6 col-lg-3">
+                <div class="offer">
+                    <div class="offer-icon">
+                        <img src="../assets/images/icons/nail-polish.png" alt="" loading="lazy">
+                    </div>
+                    <p class="offer-text">Especialistas en uñas, manicuras y pedicuras</p>
+                </div>
+            </div>
+            <div class="col-6 col-lg-3">
+                <div class="offer">
+                    <div class="offer-icon">
+                        <img src="../assets/images/icons/proteccion-de-la-piel.png" alt="" loading="lazy">
+                    </div>
+                    <p class="offer-text">Uñas acrílicas, de gel y semipermanentes</p>
+                </div>
+            </div>
+            <div class="col-6 col-lg-3">
+                <div class="offer">
+                    <div class="offer-icon">
+                        <img src="../assets/images/icons/nail-polish-1.png" alt="" loading="lazy">
+                    </div>
+                    <p class="offer-text">Estética facial y corporal</p>
+                </div>
+            </div>
+            <div class="col-6 col-lg-3">
+                <div class="offer">
+                    <div class="offer-icon">
+                        <img src="../assets/images/icons/nails.png" alt="" loading="lazy">
+                    </div>
+                    <p class="offer-text">Profesionales premiadas en arte y calidad</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- SECCIÓN: Nuestros servicios (cards con hover + link) -->
+<section class="section py-5 bg-soft">
+    <div class="container">
+        <h2 class="section-title text-center mb-4">Nuestros servicios</h2>
+
+        <div class="row g-4 justify-content-center">
+            <div class="col-12 col-md-6 col-lg-3">
+                <a class="service-card" href="manicura-pedicura.html">
+                    <img src="../assets/images/servicios/manicuraPedicura.png" alt="Manicura y pedicura" class="service-img" loading="lazy">
+                    <div class="service-overlay">
+                        <div class="service-label">Manicura &amp;<br>pedicura</div>
+                    </div>
+                </a>
+            </div>
+
+            <div class="col-12 col-md-6 col-lg-3">
+                <a class="service-card " href="unas-esculpidas.html">
+                    <img src="../assets/images/servicios/unasEsculpidas.png" alt="Uñas esculpidas" class="service-img" loading="lazy">
+                    <div class="service-overlay">
+                        <div class="service-label">Uñas esculpidas</div>
+                    </div>
+                </a>
+            </div>
+
+            <div class="col-12 col-md-6 col-lg-3">
+                <a class="service-card" href="depilacion-cera.html">
+                    <img src="../assets/images/servicios/depilacionCera.png" alt="Depilación y cera" class="service-img" loading="lazy">
+                    <div class="service-overlay">
+                        <div class="service-label">Depilación &amp; cera</div>
+                    </div>
+                </a>
+            </div>
+
+            <div class="col-12 col-md-6 col-lg-3">
+                <a class="service-card" href="estetica-facial-corporal.html">
+                    <img src="../assets/images/servicios/esteticaFacial.png" alt="Estética facial y corporal" class="service-img" loading="lazy">
+                    <div class="service-overlay">
+                        <div class="service-label">Estética facial<br>y corporal</div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- (Opcional) Botón “subir” como en tu captura -->
+<button id="toTop" class="to-top" type="button" aria-label="Subir arriba">⌃</button>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- JS propio -->
+<script src="../assets/js/main.js"></script>
+</body>
+</html>
