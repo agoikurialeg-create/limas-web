@@ -1,0 +1,251 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Sobre nosotras - LIMAS</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/common.css">
+    <link rel="stylesheet" href="../assets/css/nuestra-historia.css">
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav id="mainNav" class="navbar navbar-expand-lg navbar-dark fixed-top nav-transparent">
+    <div class="container">
+        <!-- Logo -->
+        <a class="navbar-brand d-flex align-items-center gap-2" href="index.html" aria-label="LIMAS Home">
+            <img id="logoLight" src="../assets/images/logo/logoBlanco.png" alt="LIMAS" class="nav-logo">
+            <img id="logoDark"  src="../assets/images/logo/logoNegro.png"  alt="LIMAS" class="nav-logo d-none">
+        </a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu"
+                aria-controls="navMenu" aria-expanded="false" aria-label="Abrir menú">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navMenu">
+            <ul class="navbar-nav mx-auto mb-2 mb-lg-0 gap-lg-2 align-items-lg-center">
+
+                <!-- INICIO (link aparte del logo) -->
+                <li class="nav-item">
+                    <!-- Pon class="nav-link nav-active" SOLO en la página actual -->
+                    <a class="nav-link" href="index.html">Inicio</a>
+                </li>
+
+                <!-- SERVICIOS (dropdown) -->
+                <li class="nav-item dropdown">
+                    <!-- Si estás en cualquier página de servicio, pon nav-active aquí -->
+                    <a class="nav-link dropdown-toggle" href="#" id="serviciosDropdown" role="button"
+                       data-bs-toggle="dropdown" aria-expanded="false">
+                        Servicios
+                    </a>
+
+                    <ul class="dropdown-menu dropdown-menu-end dropdown-menu-lg-start" aria-labelledby="serviciosDropdown">
+                        <!-- En la página actual, añade class="dropdown-item active" -->
+                        <li><a class="dropdown-item" href="manicura-pedicura.html">Manicura &amp; pedicura</a></li>
+                        <li><a class="dropdown-item" href="unas-esculpidas.html">Uñas esculpidas</a></li>
+                        <li><a class="dropdown-item" href="depilacion-cera.html">Depilación &amp; cera</a></li>
+                        <li><a class="dropdown-item" href="estetica-facial-corporal.html">Estética facial y corporal</a></li>
+                    </ul>
+                </li>
+
+                <!-- SOBRE NOSOTRAS -->
+                <li class="nav-item">
+                    <a class="nav-link nav-active" href="nuestra-historia.html">Nuestra historia</a>
+                </li>
+            </ul>
+
+            <div class="d-flex">
+                <a class="btn btn-cta d-flex align-items-center gap-2" href="tel:+34944383706">
+                    <span>CITA PREVIA</span>
+                    <i class="bi bi-telephone-fill"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<!-- HERO simple (para que el navbar transparente tenga sentido) -->
+<header class="page-hero">
+    <div class="page-hero__bg"></div>
+    <div class="container page-hero__content">
+        <h1 class="page-hero__title">Nuestra historia</h1>
+        <p class="page-hero__subtitle">Estética de confianza en Barakaldo</p>
+    </div>
+</header>
+
+<!-- SECCIÓN: Estética de confianza (carrusel auto + texto) -->
+<section class="section py-5 bg-gradient">
+    <div class="container">
+        <div class="row align-items-center g-4 g-lg-5">
+
+            <div class="col-12 col-lg-6">
+                <div id="confianzaCarousel"
+                     class="carousel slide carousel-fade confianza-carousel rounded-4 overflow-hidden"
+                     data-bs-ride="carousel"
+                     data-bs-interval="3500"
+                     data-bs-pause="false"
+                     data-bs-touch="false">
+
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="../assets/images/local/escaparateTiendaNueva.png" class="d-block w-100" alt="Centro de estética - imagen 1" loading="lazy">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="../assets/images/local/premiosProductos.png" class="d-block w-100" alt="Centro de estética - imagen 2" loading="lazy">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="../assets/images/local/generalCentroNuevo.png" class="d-block w-100" alt="Centro de estética - imagen 3" loading="lazy">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="../assets/images/local/paredCentroNuevo.png" class="d-block w-100" alt="Centro de estética - imagen 4" loading="lazy">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="../assets/images/local/recividorTiendaNueva.png" class="d-block w-100" alt="Centro de estética - imagen 4" loading="lazy">
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="col-12 col-lg-6">
+                <h2 class="confianza-title mb-4">Desde 2001 cuidando uñas en Barakaldo</h2>
+
+                <div class="confianza-text">
+                    <p>En Lima’s llevamos más de dos décadas dedicadas al cuidado profesional de manos y pies. Fuimos pioneras en Barakaldo introduciendo técnicas como las uñas acrílicas cuando todavía eran desconocidas, y desde entonces <strong>nuestra filosofia</strong> ha sido clara: <strong>innovación, higiene y calidad profesional.</strong><br><br>
+
+                        Siempre hemos apostado por la <strong> seguridad de nuestras clientas</strong>. Fuimos de los primeros centros en trabajar con kits individuales para cada cliente y en aplicar estrictos protocolos de esterilización profesional, porque creemos que la belleza empieza por el <strong>cuidado y la confianza.</strong><br>
+
+                        Nuestra experiencia también nos llevó a crear NALS for Nails, nuestra propia marca profesional y escuela de formación, desde donde compartimos conocimientos con nuevas generaciones de manicuristas.<br><br>
+
+                        Hoy, después de <strong>más de  20 años</strong>, seguimos fieles a lo que nos hizo empezar:<br>
+                        técnica, dedicación y atención personalizada, para que cada clienta disfrute de un resultado duradero y una experiencia de confianza.<br><br>
+
+                        Porque en <strong> Lima’s</strong> no solo cuidamos uñas.
+                        Cuidamos la seguridad, la calidad y la confianza de quienes nos eligen.</p>
+                </div>
+
+                <!--<a class="btn btn-cta d-inline-flex align-items-center gap-2 mt-3" href="tel:+34944383706">
+                    <span>RESERVA TU CITA</span>
+                    <i class="bi bi-telephone-fill"></i>
+                </a>-->
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- SECCIÓN: Consúltanos (como la captura) -->
+<section class="section py-5 bg-soft">
+    <div class="container">
+        <div class="contact-pill shadow-sm">
+            <h2 class="contact-pill__title">¡Consúltenos! Nos pondremos en contacto.</h2>
+
+            <form id="contactForm" class="row g-3 align-items-center mt-2" novalidate>
+                <div class="col-12 col-lg">
+                    <input class="form-control pill-input" name="nombre" id="nombre"
+                           placeholder="Nombre *" required minlength="2" maxlength="60">
+                    <div class="invalid-feedback">Escribe tu nombre (mínimo 2 caracteres).</div>
+                </div>
+
+                <div class="col-12 col-lg">
+                    <input class="form-control pill-input" name="telefono" id="telefono"
+                           placeholder="Teléfono de contacto" inputmode="tel" maxlength="20">
+                    <div class="invalid-feedback">Revisa el teléfono (solo números y +, espacios o guiones).</div>
+                </div>
+
+                <div class="col-12 col-lg">
+                    <input class="form-control pill-input" type="email" name="email" id="email"
+                           placeholder="Email *" required maxlength="120">
+                    <div class="invalid-feedback">Introduce un email válido.</div>
+                </div>
+
+                <div class="col-12 col-lg">
+                    <input class="form-control pill-input" name="mensaje" id="mensaje"
+                           placeholder="Mensaje *" required minlength="10" maxlength="800">
+                    <div class="invalid-feedback">Cuéntanos un poco más (mínimo 10 caracteres).</div>
+                </div>
+
+                <!-- Honeypot anti-spam (debe quedar oculto) -->
+                <input type="text" name="empresa" id="empresa" class="d-none" tabindex="-1" autocomplete="off">
+
+                <div class="col-12 col-lg-auto">
+                    <button id="contactBtn" class="btn btn-cta btn-pill" type="submit">
+                        HACER CONSULTA
+                    </button>
+                </div>
+
+                <!-- Mensajes bonitos -->
+                <div class="col-12">
+                    <div id="contactAlert" class="alert d-none mb-0" role="alert"></div>
+                </div>
+                <p class="small text-muted mt-3 mb-0">
+                    * Enviaremos tu consulta directamente al centro. Si prefieres, llámanos al
+                    <a href="tel:+34944383706">944 383 706</a>.
+                </p>
+            </form>
+        </div>
+    </div>
+</section>
+<!-- FOOTER -->
+<footer class="site-footer">
+    <div class="container">
+        <div class="footer-grid">
+
+            <!-- Izquierda: sello/imagen -->
+            <div>
+                <img class="footer-badge" src="../assets/images/logo/certificadoCalidad.png" alt="Sello de calidad" loading="lazy">
+            </div>
+
+            <!-- Centro: datos -->
+            <div>
+                <div class="footer-title">Limas Barakaldo</div>
+                <ul class="footer-list">
+                    <li class="footer-item">
+                        <i class="bi bi-geo-alt-fill"></i>
+                        <span>Arrandi Kalea, 35, 48901 San Vicente de Barakaldo, Bizkaia</span>
+                    </li>
+                    <li class="footer-item">
+                        <i class="bi bi-telephone-fill"></i>
+                        <a href="tel:+34944383706">944 383 706</a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Derecha: redes -->
+            <div>
+                <div class="footer-title">Síguenos</div>
+                <div class="footer-social">
+                    <a class="social-btn" href="https://www.facebook.com/LimasBarakaldoNails/" target="_blank" rel="noopener" aria-label="Facebook">
+                        <i class="bi bi-facebook"></i>
+                    </a>
+                    <a class="social-btn" href="https://www.instagram.com/limasbarakaldonails/" target="_blank" rel="noopener" aria-label="Instagram">
+                        <i class="bi bi-instagram"></i>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            <div>© <span id="year"></span> LIMAS. Todos los derechos reservados.</div>
+            <div class="footer-links">
+                <a href="../legal/aviso-legal.html">Aviso legal</a>
+                <a href="../legal/privacidad.html">Privacidad</a>
+                <a href="../legal/cookies.html">Cookies</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<button id="toTop" class="to-top" type="button" aria-label="Subir arriba"><i class="bi bi-chevron-double-up"></i></button>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="../assets/js/contact.js"></script>
+<script src="../assets/js/main.js"></script>
+</body>
+</html>

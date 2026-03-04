@@ -1,0 +1,316 @@
+/* =========================
+   COMMON (todas las páginas)
+   ========================= */
+:root{
+  --brand-green: #6e7f1b;
+  --brand-dark-green: #4F871E;
+  --text-dark: #111;
+  --soft-bg: #EBFAE3;
+  --muted: rgba(17,17,17,.7);
+}
+
+body{
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  color: var(--text-dark);
+}
+
+.section-title{
+  font-family: Georgia, "Times New Roman", serif;
+  font-weight: 700;
+  letter-spacing: .2px;
+}
+
+.bg-soft{ background: var(--soft-bg); }
+
+.bg-section{
+  background: linear-gradient(180deg, #FFFFFF 100%, var(--soft-bg) 100%);
+}
+/* ===== Navbar ===== */
+.nav-logo{
+  height: 64px;
+  width: auto;
+}
+
+#mainNav{
+  transition: background-color .25s ease, box-shadow .25s ease;
+  padding-top: 14px;
+  padding-bottom: 14px;
+}
+
+#mainNav.nav-transparent{
+  background: rgba(0,0,0,0.30);
+  box-shadow: none;
+}
+
+#mainNav.nav-solid{
+  background: #fff;
+  box-shadow: 0 8px 28px rgba(0,0,0,.08);
+}
+
+/* Links */
+#mainNav .nav-link{
+  font-size: 19px;
+  font-weight: 500;
+}
+
+#mainNav.nav-transparent .nav-link{
+  color: rgba(255,255,255,.92);
+}
+
+#mainNav.nav-transparent .nav-link:hover{
+  color: #fff;
+  text-decoration: underline;
+  text-underline-offset: 6px;
+}
+
+#mainNav.nav-solid .nav-link{
+  color: #111 !important;
+}
+
+#mainNav.nav-solid .nav-link:hover{
+  color: var(--brand-green) !important;
+  text-decoration: underline;
+  text-underline-offset: 6px;
+}
+
+/* ===== NAV: item activo ===== */
+#mainNav .nav-link.nav-active{
+  font-weight: 700;
+  font-size: 21px;
+}
+
+/* Cuando el nav está BLANCO (solid): activo en verde */
+#mainNav.nav-solid .nav-link.nav-active{
+  color: var(--brand-green) !important;
+}
+
+/* Cuando el nav está TRANSPARENTE: activo claro + subrayado */
+#mainNav.nav-transparent .nav-link.nav-active{
+  color: #fff !important;
+  text-decoration: underline;
+  text-underline-offset: 6px;
+}
+
+/* Dropdown: que el toggle activo también destaque */
+#mainNav .dropdown-toggle.nav-active{
+  font-weight: 700;
+}
+
+/* Dropdown items: el active de Bootstrap lo “brandizamos” */
+.dropdown-menu .dropdown-item.active,
+.dropdown-menu .dropdown-item:active{
+  background: rgba(110,127,27,.15);
+  color: var(--brand-green);
+  font-weight: 700;
+}
+/* Hover global del dropdown */
+#mainNav .dropdown-item:hover{
+  background: rgba(110,127,27,.10);
+  color: #111;
+}
+
+/* Botón CTA */
+.btn-cta{
+  background: var(--brand-green);
+  border: 0;
+  color: #fff;
+  font-weight: 700;
+  padding: 8px 14px;
+  border-radius: 8px;
+  font-size: 13px;
+  letter-spacing: .2px;
+  transition: transform .15s ease, filter .15s ease, background .15s ease;
+}
+
+.btn-cta:hover{
+  background: var(--brand-dark-green);
+  color: #fff;
+  filter: brightness(1.05);
+  transform: translateY(-1px);
+}
+
+.btn-cta i{ color:#fff; }
+
+/* Botón subir */
+.to-top{
+  position: fixed;
+  right: 18px;
+  bottom: 18px;
+  width: 42px;
+  height: 42px;
+  border-radius: 10px;
+  border: 0;
+  background: rgba(0,0,0,.38);
+  color: #fff;
+  display: none;
+  box-shadow: 0 12px 30px rgba(0,0,0,.18);
+  z-index: 9999;
+}
+.to-top.show{ display: inline-grid; place-items: center; }
+.to-top:hover{ filter: brightness(1.05); }
+
+/* ===== Footer (moderno, basado en tu captura) ===== */
+.site-footer{
+  background: var(--brand-green);
+  color: #fff;
+  padding: 52px 0;
+}
+
+.footer-grid{
+  display: grid;
+  grid-template-columns: 260px 1fr 260px;
+  gap: 42px;
+  align-items: start;
+}
+
+.footer-badge{
+  width: 120px;
+  max-width: 100%;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 20px 50px rgba(0,0,0,.25);
+}
+
+.footer-title{
+  font-family: Georgia, "Times New Roman", serif;
+  font-weight: 800;
+  font-size: 26px;
+  margin-bottom: 14px;
+}
+
+.footer-list{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 12px;
+}
+
+.footer-item{
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  color: rgba(255,255,255,.92);
+}
+
+.footer-item i{
+  font-size: 18px;
+  line-height: 1.2;
+  color: rgba(255,255,255,.92);
+}
+
+.footer-item a{
+  color: rgba(255,255,255,.92);
+  text-decoration: none;
+}
+.footer-item a:hover{ text-decoration: underline; }
+
+.footer-social{
+  display: flex;
+  gap: 12px;
+  margin-top: 10px;
+}
+
+.social-btn{
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  display: inline-grid;
+  place-items: center;
+  background: rgba(255,255,255,.12);
+  border: 1px solid rgba(255,255,255,.18);
+  color: #fff;
+  text-decoration: none;
+  transition: transform .15s ease, filter .15s ease;
+}
+.social-btn:hover{ transform: translateY(-2px); filter: brightness(1.05); }
+.social-btn i{ font-size: 18px; }
+
+.footer-bottom{
+  margin-top: 40px;
+  padding-top: 16px;
+  border-top: 1px solid rgba(255,255,255,.18);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 18px;
+  justify-content: space-between;
+  color: rgba(255,255,255,.85);
+  font-size: 14px;
+}
+
+.footer-links a{
+  color: rgba(255,255,255,.88);
+  text-decoration: none;
+  margin-right: 12px;
+}
+.footer-links a:hover{ text-decoration: underline; }
+
+/* ===== Responsive ===== */
+@media (max-width: 992px){
+  .footer-grid{
+    grid-template-columns: 1fr;
+  }
+  .nav-logo{ height: 54px; }
+
+  /* En móvil, cuando el menú se despliega sobre transparente, lo hacemos blanco para leer */
+  .navbar-collapse{
+    background: #fff;
+    border-radius: 14px;
+    padding: 14px;
+    margin-top: 10px;
+    box-shadow: 0 18px 45px rgba(0,0,0,.12);
+  }
+  /* =========================================
+     MENÚ TOGGLE (MÓVIL) -> estilo "SOLID"
+     aunque el navbar esté en transparent
+     ========================================= */
+  @media (max-width: 992px){
+
+    /* El contenedor desplegado: blanco, redondeado, con sombra */
+    #mainNav.nav-transparent .navbar-collapse{
+      background: #fff;
+      border-radius: 14px;
+      padding: 14px;
+      margin-top: 10px;
+      box-shadow: 0 18px 45px rgba(0,0,0,.12);
+    }
+
+    /* Links dentro del menú desplegado: negros como solid */
+    #mainNav.nav-transparent .navbar-collapse .nav-link{
+      color: #111 !important;
+    }
+
+    /* Hover dentro del menú desplegado */
+    #mainNav.nav-transparent .navbar-collapse .nav-link:hover{
+      color: #111 !important;
+      text-decoration: underline;
+      text-underline-offset: 6px;
+    }
+
+    /* Activo dentro del menú desplegado: verde corporativo */
+    #mainNav.nav-transparent .navbar-collapse .nav-link.nav-active{
+      color: var(--brand-green) !important;
+      font-weight: 800;
+    }
+
+    /* Dropdown menu (la lista que se abre) */
+    #mainNav.navbar-collapse .dropdown-menu{
+      border-radius: 12px;
+      border: 1px solid rgba(0,0,0,.08);
+      box-shadow: 0 18px 45px rgba(0,0,0,.10);
+    }
+
+    #mainNav.nav-transparent .navbar-collapse .dropdown-item{
+      color: #111;
+    }
+
+    #mainNav.nav-transparent .navbar-collapse .dropdown-item.active,
+    #mainNav.nav-transparent .navbar-collapse .dropdown-item:active{
+      background: rgba(110,127,27,.15);
+      color: var(--brand-green);
+      font-weight: 700;
+    }
+  }
+  }
+
+}

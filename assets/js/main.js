@@ -15,7 +15,7 @@
       nav.classList.remove('navbar-dark');
       nav.classList.add('navbar-light');
 
-      // swap logos (si tienes ambos)
+      // swap logos
       if (logoLight && logoDark) {
         logoLight.classList.add('d-none');
         logoDark.classList.remove('d-none');
