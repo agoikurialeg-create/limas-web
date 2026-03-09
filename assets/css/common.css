@@ -22,9 +22,19 @@ body{
 
 .bg-soft{ background: var(--soft-bg); }
 
-.bg-section{
-  background: linear-gradient(180deg, #FFFFFF 100%, var(--soft-bg) 100%);
+.bg-section-a{
+  background: linear-gradient(180deg, #FFFFFF 0%, var(--soft-bg) 100%) !important;
 }
+
+.bg-section-b{
+  background: var(--soft-bg) !important;
+}
+
+.bg-section-c{
+  background: linear-gradient(0deg, #FFFFFF 0%, var(--soft-bg) 100%) !important;
+}
+
+
 /* ===== Navbar ===== */
 .nav-logo{
   height: 64px;
@@ -311,6 +321,4 @@ body{
       font-weight: 700;
     }
   }
-  }
-
 }
