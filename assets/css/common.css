@@ -2,21 +2,63 @@
    COMMON (todas las páginas)
    ========================= */
 :root{
-  --brand-green: #6e7f1b;
-  --brand-dark-green: #4F871E;
+  --verde-lima-clasico: #9ab63b; /* verde lima clasico*/
+  --verde-hoja: #669f41; /* verde hoja*/
+  --verde-lima-neon: #d1cf2e;
   --text-dark: #111;
   --soft-bg: #EBFAE3;
   --muted: rgba(17,17,17,.7);
 }
 
-body{
-  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-  color: var(--text-dark);
+/* =========================
+   MODULUS FONT
+========================= */
+
+@font-face {
+  font-family: "Modulus";
+  src: url("/assets/fonts/ModulusPro-Medium.woff2") format("woff2"),
+       url("/assets/fonts/ModulusPro-Medium.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
 }
 
-.section-title{
-  font-family: Georgia, "Times New Roman", serif;
+@font-face {
+  font-family: "Modulus-Bold";
+  src: url("/assets/fonts/ModulusPro-Bold.woff2") format("woff2"),
+       url("/assets/fonts/ModulusPro-Bold.woff") format("woff");
   font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+body{
+    font-family: "Modulus", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+    color: var(--text-dark);
+}
+
+h1,h2,h3,h4,h5,h6,
+.section-title,
+.hero-title,
+.page-hero__title,
+.service-block__title,
+.service-intro__title,
+.service-cta__title,
+.footer-title,
+.confianza-title,
+.contact-pill__title{
+  font-family: "League Spartan", sans-serif;
+}
+/*
+.service-intro__title,
+.confianza-title,
+.contact-pill__title{
+  color: var(--verde-hoja) !important;
+}*/
+
+
+.section-title{
+  font-weight: 600;
   letter-spacing: .2px;
 }
 
@@ -60,7 +102,7 @@ body{
 /* Links */
 #mainNav .nav-link{
   font-size: 19px;
-  font-weight: 500;
+  font-weight: 600;
 }
 
 #mainNav.nav-transparent .nav-link{
@@ -78,20 +120,20 @@ body{
 }
 
 #mainNav.nav-solid .nav-link:hover{
-  color: var(--brand-green) !important;
+  color: var(--verde-lima-clasico) !important;
   text-decoration: underline;
   text-underline-offset: 6px;
 }
 
 /* ===== NAV: item activo ===== */
 #mainNav .nav-link.nav-active{
-  font-weight: 700;
+  font-weight: 800;
   font-size: 21px;
 }
 
 /* Cuando el nav está BLANCO (solid): activo en verde */
 #mainNav.nav-solid .nav-link.nav-active{
-  color: var(--brand-green) !important;
+  color: var(--verde-lima-clasico) !important;
 }
 
 /* Cuando el nav está TRANSPARENTE: activo claro + subrayado */
@@ -106,22 +148,40 @@ body{
   font-weight: 700;
 }
 
-/* Dropdown items: el active de Bootstrap lo “brandizamos” */
-.dropdown-menu .dropdown-item.active,
-.dropdown-menu .dropdown-item:active{
+/* Estado activo del dropdown */
+#mainNav .dropdown-menu .dropdown-item.active,
+#mainNav .dropdown-menu .dropdown-item:active{
   background: rgba(110,127,27,.15);
-  color: var(--brand-green);
+  color: var(--verde-lima-clasico) !important;
   font-weight: 700;
 }
-/* Hover global del dropdown */
-#mainNav .dropdown-item:hover{
+
+/* Activo + hover */
+#mainNav .dropdown-menu .dropdown-item.active:hover,
+#mainNav .dropdown-menu .dropdown-item:active:hover{
+  background: rgba(110,127,27,.15);
+  color: var(--verde-hoja) !important;
+  font-weight: 700;
+}
+
+/* Hover normal solo para los NO activos */
+#mainNav .dropdown-menu .dropdown-item:not(.active):hover{
   background: rgba(110,127,27,.10);
-  color: #111;
+  color: var(--verde-lima-clasico) !important;
+  font-weight: 700;
+}
+
+.nav-mobile-wrap{
+  position: relative;
+}
+
+.nav-mobile-actions{
+  display: none;
 }
 
 /* Botón CTA */
 .btn-cta{
-  background: var(--brand-green);
+  background: var(--verde-lima-clasico);
   border: 0;
   color: #fff;
   font-weight: 700;
@@ -133,7 +193,7 @@ body{
 }
 
 .btn-cta:hover{
-  background: var(--brand-dark-green);
+  background: var(--verde-lima-neon);
   color: #fff;
   filter: brightness(1.05);
   transform: translateY(-1px);
@@ -161,7 +221,7 @@ body{
 
 /* ===== Footer (moderno, basado en tu captura) ===== */
 .site-footer{
-  background: var(--brand-green);
+  background: var(--verde-hoja);
   color: #fff;
   padding: 52px 0;
 }
@@ -182,8 +242,7 @@ body{
 }
 
 .footer-title{
-  font-family: Georgia, "Times New Roman", serif;
-  font-weight: 800;
+  font-weight: 600;
   font-size: 26px;
   margin-bottom: 14px;
 }
@@ -233,7 +292,13 @@ body{
   text-decoration: none;
   transition: transform .15s ease, filter .15s ease;
 }
-.social-btn:hover{ transform: translateY(-2px); filter: brightness(1.05); }
+.social-btn:hover{
+  scale: 1.05;
+  background: rgba(209, 207, 46, .50);
+  filter: brightness(1.05);
+  transition: scale .35s ease;
+  transition: color .35s ease;
+ }
 .social-btn i{ font-size: 18px; }
 
 .footer-bottom{
@@ -260,7 +325,7 @@ body{
   .footer-grid{
     grid-template-columns: 1fr;
   }
-  .nav-logo{ height: 54px; }
+  .nav-logo{ height: 42px; }
 
   /* En móvil, cuando el menú se despliega sobre transparente, lo hacemos blanco para leer */
   .navbar-collapse{
@@ -274,7 +339,77 @@ body{
      MENÚ TOGGLE (MÓVIL) -> estilo "SOLID"
      aunque el navbar esté en transparent
      ========================================= */
-  @media (max-width: 992px){
+  @media (max-width: 991.98px){
+
+    #mainNav .container{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    /* Logo */
+    .navbar-brand{
+      margin-right: 0;
+      z-index: 3;
+    }
+
+    /* Grupo derecho móvil */
+    .nav-mobile-actions{
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-left: auto;
+      z-index: 3;
+    }
+
+    /* Botón hamburguesa: solo las líneas */
+    .navbar-toggler{
+      border: 0 !important;
+      box-shadow: none !important;
+      padding: 0;
+      background: transparent;
+      border-radius: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      order: 1;
+    }
+
+    .navbar-toggler:focus{
+      box-shadow: none !important;
+      outline: none;
+    }
+
+    /* Colocar hamburguesa entre logo y CTA */
+    .navbar-toggler{
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    /* Icono hamburguesa */
+    #mainNav.nav-transparent .navbar-toggler-icon{
+      filter: brightness(0) invert(1);
+    }
+
+    #mainNav.nav-solid .navbar-toggler-icon{
+      filter: none;
+    }
+
+    /* CTA móvil */
+    .btn-cta-mobile{
+      padding: 8px 10px;
+      font-size: 12px;
+      border-radius: 8px;
+      white-space: nowrap;
+      order: 2;
+    }
+
+    /* El menú desplegado baja debajo de todo */
+    #mainNav .navbar-collapse{
+      width: 100%;
+      flex-basis: 100%;
+    }
 
     /* El contenedor desplegado: blanco, redondeado, con sombra */
     #mainNav.nav-transparent .navbar-collapse{
@@ -299,12 +434,12 @@ body{
 
     /* Activo dentro del menú desplegado: verde corporativo */
     #mainNav.nav-transparent .navbar-collapse .nav-link.nav-active{
-      color: var(--brand-green) !important;
+      color: var(--verde-lima-clasico) !important;
       font-weight: 800;
     }
 
     /* Dropdown menu (la lista que se abre) */
-    #mainNav.navbar-collapse .dropdown-menu{
+    #mainNav .navbar-collapse .dropdown-menu{
       border-radius: 12px;
       border: 1px solid rgba(0,0,0,.08);
       box-shadow: 0 18px 45px rgba(0,0,0,.10);
@@ -317,8 +452,33 @@ body{
     #mainNav.nav-transparent .navbar-collapse .dropdown-item.active,
     #mainNav.nav-transparent .navbar-collapse .dropdown-item:active{
       background: rgba(110,127,27,.15);
-      color: var(--brand-green);
+      color: var(--verde-lima-clasico);
       font-weight: 700;
     }
+  }
+  @media (max-width: 431.98px){
+
+    .nav-logo{
+      height: 37px;
+    }
+
+    .btn-cta-mobile{
+      width: 38px;
+      height: 38px;
+      padding: 0;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .cta-mobile-text{
+      display: none;
+    }
+
+    .btn-cta-mobile i{
+      font-size: 16px;
+    }
+
   }
 }

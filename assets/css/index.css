@@ -50,7 +50,7 @@
 }
 
 .btn-hero{
-  background: var(--brand-green);
+  background: var(--verde-lima-clasico);
   color: #fff;
   border: 0;
   padding: 10px 18px;
@@ -61,7 +61,7 @@
   transition: transform .15s ease, background .15s ease;
 }
 .btn-hero:hover{
-  background: var(--brand-dark-green);
+  background: var(--verde-lima-neon);
   color:white;
   transform: translateY(-1px);
 }
@@ -134,12 +134,17 @@
 .service-card:hover .service-label{
   color: #4F871E;
 }
+.service-card:hover{
+    scale: 1.02;
+    transition: scale .35s ease
+
+    }
+
 .service-card:hover .service-overlay{
   background: linear-gradient(
     220deg,
     rgba(78, 139, 28, .45),
-    rgba(255, 255, 255, .50)
-
+    rgba(209, 207, 46, .30)
   );
 }
 #reviewsCarousel .carousel-item{

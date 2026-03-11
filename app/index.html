@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>LIMAS - Centro de Estética</title>
     <meta name="description" content="Centro de estética en Barakaldo: manicura, pedicura, uñas esculpidas, depilación y estética facial y corporal." />
+    <link rel="icon" type="image/png" href="/favicon.png">
+
+    <meta name="theme-color" content="#9ab63b">
 
     <!-- Bootstrap (CDN) -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -13,56 +16,66 @@
     <!-- CSS propio -->
     <link rel="stylesheet" href="../assets/css/common.css">
     <link rel="stylesheet" href="../assets/css/index.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
 <!-- NAVBAR -->
 <nav id="mainNav" class="navbar navbar-expand-lg navbar-dark fixed-top nav-transparent">
-    <div class="container">
-        <!-- Logo (sigue siendo link a Home) -->
+    <div class="container nav-mobile-wrap">
+
+        <!-- Logo -->
         <a class="navbar-brand d-flex align-items-center gap-2" href="index.html" aria-label="LIMAS Home">
             <img id="logoLight" src="../assets/images/logo/logoBlanco.png" alt="LIMAS" class="nav-logo">
-            <img id="logoDark"  src="../assets/images/logo/logoNegro.png"  alt="LIMAS" class="nav-logo d-none">
+            <img id="logoDark" src="../assets/images/logo/logoNegro.png" alt="LIMAS" class="nav-logo d-none">
         </a>
 
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu"
-                aria-controls="navMenu" aria-expanded="false" aria-label="Abrir menú">
-            <span class="navbar-toggler-icon"></span>
-        </button>
+        <!-- ZONA DERECHA EN MÓVIL -->
+        <div class="nav-mobile-actions d-lg-none">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu"
+                    aria-controls="navMenu" aria-expanded="false" aria-label="Abrir menú">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
+            <a class="btn btn-cta btn-cta-mobile d-flex align-items-center gap-2" href="tel:+34944383706">
+                <span class="cta-mobile-text">CITA PREVIA</span>
+                <i class="bi bi-telephone-fill"></i>
+            </a>
+        </div>
+
+        <!-- MENÚ -->
         <div class="collapse navbar-collapse" id="navMenu">
             <ul class="navbar-nav mx-auto mb-2 mb-lg-0 gap-lg-2 align-items-lg-center">
 
-                <!-- INICIO (link aparte del logo) -->
                 <li class="nav-item">
-                    <!-- Pon class="nav-link nav-active" SOLO en la página actual -->
                     <a class="nav-link nav-active" href="index.html">Inicio</a>
                 </li>
 
-                <!-- SERVICIOS (dropdown) -->
                 <li class="nav-item dropdown">
-                    <!-- Si estás en cualquier página de servicio, pon nav-active aquí -->
                     <a class="nav-link dropdown-toggle" href="#" id="serviciosDropdown" role="button"
                        data-bs-toggle="dropdown" aria-expanded="false">
                         Servicios
                     </a>
 
                     <ul class="dropdown-menu dropdown-menu-end dropdown-menu-lg-start" aria-labelledby="serviciosDropdown">
-                        <!-- En la página actual, añade class="dropdown-item active" -->
                         <li><a class="dropdown-item" href="manicura-pedicura.html">Manicura &amp; pedicura</a></li>
                         <li><a class="dropdown-item" href="unas-esculpidas.html">Uñas esculpidas</a></li>
                         <li><a class="dropdown-item" href="depilacion-cera.html">Depilación &amp; cera</a></li>
                     </ul>
                 </li>
 
-                <!-- NUESTRA HISTORIA -->
                 <li class="nav-item">
                     <a class="nav-link" href="nuestra-historia.html">Nuestra historia</a>
                 </li>
             </ul>
 
-            <div class="d-flex">
+            <!-- CTA SOLO DESKTOP -->
+            <div class="d-none d-lg-flex">
                 <a class="btn btn-cta d-flex align-items-center gap-2" href="tel:+34944383706">
                     <span>CITA PREVIA</span>
                     <i class="bi bi-telephone-fill"></i>
@@ -160,7 +173,7 @@
 </section>
 
 <!-- SECCIÓN: Nuestros servicios (cards con hover + link) -->
-<section class="section py-5 bg-section-c">
+<section class="section py-5 bg-section-b">
     <div class="container">
         <h2 class="section-title text-center mb-4">Nuestros servicios</h2>
 
@@ -191,23 +204,14 @@
                     </div>
                 </a>
             </div>
-
-            <div class="col-12 col-md-6 col-lg-3">
-                <a class="service-card" href="estetica-facial-corporal.html">
-                    <img src="../assets/images/servicios/esteticaFacial.png" alt="Estética facial y corporal" class="service-img" loading="lazy">
-                    <div class="service-overlay">
-                        <div class="service-label">Estética facial<br>y corporal</div>
-                    </div>
-                </a>
-            </div>
         </div>
     </div>
 </section>
 <!-- RESEÑAS -->
-<section class="section py-5 bg-section-a">
+<section class="section py-5 bg-section-b">
     <div class="container">
         <h2 class="section-title text-center mb-4">Reseñas de nuestros clientes</h2>
-        <script defer async src='https://cdn.trustindex.io/loader.js?ba8fc0f6621e18674e660ed638e'></script>
+        <script defer async src='https://cdn.trustindex.io/loader.js?2773354668996641eb765ff0eaf'></script>
         <script defer async src='https://cdn.trustindex.io/loader.js?720019466ba7272e21762a9535b'></script>
     </div>
 </section>
